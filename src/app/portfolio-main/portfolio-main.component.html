@@ -1,0 +1,345 @@
+<div class="pf-navbar-container-section fixed-top">
+    <section class="pf-navbar">
+        <span class="pf-nav-title">
+            <mat-label>CVANCE</mat-label>
+        </span>
+        <ul class="pf-nav-links" [class.open-submenu]="isMenuOpen">
+            @for (links of nav_links; track $index) {
+            <li>
+                <a [href]="links.path_navigation">{{links.nav_title}}</a>
+            </li>
+            }
+        </ul>
+        <div class="menu-bars" (click)="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </section>
+</div>
+<div class="pf-nav-hero-section" id="homeSection">
+    <section class="pf-hero-container">
+        <div class="row">
+            <div class="col-md col-sm-12">
+                <div> <!-- First div  -->
+                    <span class="pe-1"><mat-label>Greetings, I am</mat-label></span>
+                    <span class="text-highlight">Sivasubramanian</span>
+                </div>
+                <div class="pt-2">
+                    <mat-label class="heading-1">I bring your ambitions to life through My innovative
+                        designs.</mat-label>
+                </div>
+            </div>
+            <div class="col-md col-sm-12 position-relative d-flex justify-content-center">
+                <div class="pf-hero-section-img">
+                    <!-- <img class="pf-hero-image" src="/assets/images/Adobe Express - file.png" alt=""> -->
+                </div>
+                <span class="sub-img1"><img src="/assets/images/star.png" alt=""></span>
+                <span class="sub-img2"><img src="/assets/images/music-note.png" alt=""></span>
+                <span class="sub-img3"><img src="/assets/images/coffee-cup.png" alt=""></span>
+            </div>
+        </div>
+        <div class="pt-2 expander-div">
+            <span (click)="expand_collapse()">
+                <span class="pf-expand-collapse-btn">
+                    <i [ngClass]="click_toggle ? 'fa-solid fa-angle-up' : 'fa-solid fa-angle-down'" class=""></i>
+                </span>
+                <span class="cursor-pointer"><mat-label>Reveal {{click_toggle ?
+                        'Less':'More'}}</mat-label></span>
+            </span>
+        </div>
+        <div class="pf-about-section" [ngClass]="click_toggle ? '':'d-none'">
+            <div class="row">
+                <div class="col-md col-sm-12 position-relative">
+                    <div class="d-md-block d-none">
+                        <img src="/assets/images/dots1.jpg" alt="">
+                    </div>
+                    <div class="pf-profile-heading">
+                        <span class="pe-2"><mat-label>Where</mat-label></span>
+                        <span class="pe-2"><mat-label class="text-highlight">Web Design</mat-label></span>
+                        <span class="pe-2"><mat-label>meets perfection, and </mat-label></span>
+                        <span class="pe-2"><mat-label class="text-highlight">UI</mat-label></span>
+                        <span><mat-label>becomes art.</mat-label></span>
+                        <div class="pf-resume-attachment pt-md-0 pt-4">
+                            <button class="pf-secondary-btn">Resume spotlight</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12 ">
+                    <div class="text-justify pt-4 pt-md-0">
+                        As a skilled product designer with deep expertise in grid systems, typography, form design, and
+                        Bootstrap, I craft intricate layouts that are both visually appealing and functional. I
+                        specialize in creating responsive designs that adapt seamlessly across devices, ensuring a
+                        smooth and intuitive user experience.
+                    </div>
+                    <div class="pt-3 text-justify">
+                        From designing user-centric forms to converting them into Angular forms with Angular UI, I
+                        combine creativity with technical precision to deliver impactful digital experiences.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="pf-journey-section" id="journeySection">
+    <div class="heading-1">
+        <mat-label>The journey</mat-label>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-auto col-sm-12">
+            <div class="pf-social-profile">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="soc-profile-icon">
+                            <img class="pf-hero-image" src="/assets/images/Adobe Express - file.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col ps-0 d-flex align-items-center">
+                        <mat-label>Sivasubramanian</mat-label>
+                    </div>
+                </div>
+                <div class="row pt-3">
+                    <div class="col">
+                        <div class="soc-post-picture">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col">
+                        <span class="pe-2"><img src="/assets/images/Heart.svg" alt=""></span>
+                        <span class="pe-2"><img src="/assets/images/Chat.svg" alt=""></span>
+                        <span><img src="/assets/images/Rocket.svg" alt=""></span>
+                    </div>
+                    <div class="col-auto">
+                        <img src="/assets/images/Save.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md col-sm-12 pt-md-0 pt-4">
+            <div class="soc-information-container">
+                jj
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pf-skills-section" id="skillsSection">
+    <div class="row">
+        <div class="col pb-md-5 pb-4">
+            <div class="row pt-4">
+                <div class="col">
+                    <div class="heading-1">
+                        <mat-label>Skills</mat-label>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col">
+                    <div class="skill-information-container">
+                        <div class="row">
+                            <div class="col">
+                                <mat-label class="sub-heading-1 fw-bold">{{default_data.img_name}}</mat-label>
+                            </div>
+                            <div class="col-auto">
+                                <div class="show-skill-image">
+                                    <img [src]="default_data.image_path" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skill-detail-widget mt-4">
+                            <div class="percentage-widget">
+                                <mat-label>{{default_data.course_percent}}%</mat-label>
+                            </div>
+                            <div class="pt-3 pb-2 ps-4 pe-4 text-justify">
+                                <span>{{default_data.link_description}}</span>
+                            </div>
+                            <div class="skill-widget-sub d-flex justify-content-end align-items-end">
+                                <span><img src="/assets/images/arrows.png" alt=""></span>
+                                <span><img src="/assets/images/arrows.png" alt=""></span>
+                                <span><img src="/assets/images/dots2.png" alt=""></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto d-md-block d-none d-flex justify-content-end">
+            <div class="pf-skills-icons-container">
+                @for (item of imageLinks; track $index) {
+                <div class="skill-icon" (click)="getData(item)">
+                    <img [src]="item.image_path" alt="">
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pf-career-excellence" id="carrerExcellenceSection">
+    <div class="row">
+        <div class="col">
+            <div class="heading-1">
+                <mat-label>Career Excellence</mat-label>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3 pb-3">
+        <div class="col">
+            <div class="pf-career-news-container">
+                <div class="news-paper">
+                    <div class="news-paper-header">
+                        <div>Page 1</div>
+                        <div class="news-paper-brand">SPOTLIGHT</div>
+                        <div>
+                            <span>Spotlight papers,</span>
+                            <span>Quality of NEWS at doorstep</span>
+                        </div>
+                    </div>
+                    <div class="news-paper-brand d-md-none text-center pt-md-0 pt-2 pb-md-0 pb-2">SPOTLIGHT</div>
+                    <div class="spot-news-title">
+                        <span>What my design excellence reveals about my career?</span>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="news-border"></div>
+                        </div>
+                    </div>
+                    <div class="row main-news-content">
+                        <div
+                            class="col-md-auto col-sm-12 pt-3 pb-3 ms-md-3 me-md-0 ps-4 pe-4 border-md-end d-md-block d-flex justify-content-center">
+                            <div class="news-image">
+                                <img src="https://i.pinimg.com/736x/55/0b/a6/550ba6e62893b4a014dae0b4108c146a.jpg">
+                            </div>
+                            <div class="pt-2 d-md-block d-none">
+                                <span>Arthur Morgan</span>
+                            </div>
+                        </div>
+                        <div class="col pt-3 pb-3 me-md-3 pe-4 ps-4 text-justify main-info-content">
+                            <span class="">Arthur Morgan is a character and the main playable protagonist of the video
+                                game Red Dead Redemption 2.
+                                A high-ranking member of the Van der Linde gang, Arthur must deal with the decline of
+                                the Wild West while
+                                attempting to survive against government forces and other adversaries in a fictionalized
+                                representation of
+                                the American frontier. He is portrayed by Roger Clark through performance
+                                capture.</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="news-border"></div>
+                        </div>
+                    </div>
+                    <div class="news-content-section">
+                        <span>Rockstar Games decided to focus Red Dead Redemption 2 on one character, in order to follow
+                            him more
+                            personally. They felt this was more appropriate for the narrative structure of a Western.
+                            Clark wanted to play
+                            Arthur in a manner that was complex enough for the player to choose any path and still have
+                            the character make
+                            sense. He took inspiration from actors such as Toshiro Mifune, John Wayne, and Rob Wiethoff,
+                            who played John
+                            Marston in the game and its predecessor. Arthur has received acclaim from critics, with his
+                            complexity and
+                            path to redemption most frequently the subject of praise. Reviewers also lauded him for
+                            bringing the world and
+                            other characters to life, and ranked him among the most iconic video game characters. For
+                            his work, Clark
+                            accrued numerous nominations and was awarded Best Performance at the Game Awards.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pf-get-in-touch" id="getInTouchSection">
+    <div class="row pt-md-5 pt-4">
+        <div class="col">
+            <div class="heading-1">
+                <mat-label>Get in touch</mat-label>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3 pb-md-0 pb-3">
+        <div class="col">
+            <div class="pf-message-container">
+                <div class="message-headar">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="soc-profile-icon">
+                            </div>
+                        </div>
+                        <div class="col ps-0 d-flex align-items-center">
+                            <mat-label>Sivasubramanian</mat-label>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-section">
+                    <div class="row pt-2 d-flex justify-content-end">
+                        <div class=" col-md-6 col-sm-12 position-relative">
+                            <mat-form-field appearance="outline" class="message-fields">
+                                <input matInput placeholder="Name">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row pt-1 d-flex justify-content-end">
+                        <div class=" col-md-6 col-sm-12 position-relative">
+                            <mat-form-field appearance="outline" class="message-fields">
+                                <input matInput placeholder="Email">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row pt-1 d-flex justify-content-end">
+                        <div class=" col-md-7 col-sm-12 position-relative">
+                            <mat-form-field appearance="outline" class="message-fields">
+                                <textarea matInput placeholder="Comments" cdkTextareaAutosize
+                                    #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                                    cdkAutosizeMaxRows="10"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col text-end">
+                            <button class="pf-primary-btn">
+                                <span class="pe-2">Send</span>
+                                <span><i class="fa-regular fa-paper-plane"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pf-footer-section">
+    <div class="pf-footer-body">
+        <div class="row">
+            <div class="col">
+                <div class="pf-nav-title">
+                    <mat-label>CVANCE</mat-label>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col">
+                <ul class="pf-footer-nav-links">
+                    @for (links of nav_links; track $index) {
+                    <li>
+                        <a [href]="links.path_navigation">{{links.nav_title}}</a>
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pf-footer-tail">
+        <div class="text-center">
+            <span class="pe-1"><mat-label>Copyright &copy;{{currentDate}};</mat-label></span>
+            <span class="pe-1"><mat-label>Designed by</mat-label></span>
+            <span><mat-label class="text-highlight">Siva</mat-label></span>
+        </div>
+    </div>
+</div>

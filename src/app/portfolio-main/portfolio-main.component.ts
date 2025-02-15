@@ -46,12 +46,12 @@ export class PortfolioMainComponent implements OnInit {
   }
 
   imageLinks = [
-    {img_name:'HTML',image_id:'HTML',image_path:'/assets/images/html5.png',course_percent:'95',link_description:'I have a clear understanding of the structure of HTML, including its semantic principles, proper organization, and best practices for creating well-structured, accessible, and responsive layouts. My expertise ensures clean, maintainable code that integrates seamlessly with modern frameworks and enhances user experiences.'},
-    {img_name:'CSS',image_id:'CSS',image_path:'/assets/images/css3.png',course_percent:'95'},
-    {img_name:'JS',image_id:'JS',image_path:'/assets/images/js.png',course_percent:'95'},
-    {img_name:'Angular',image_id:'ANGLR',image_path:'/assets/images/angular.png',course_percent:'95'},
-    {img_name:'Angular Theming',image_id:'ANGLMAT',image_path:'/assets/images/angular-material.png',course_percent:'95'},
-    {img_name:'Figma',image_id:'FIGMA',image_path:'/assets/images/figma.png',course_percent:'95'},
+    {img_name:'HTML',image_id:'HTML',image_path:'./assets/images/html5.png',course_percent:'95',link_description:'I have a clear understanding of the structure of HTML, including its semantic principles, proper organization, and best practices for creating well-structured, accessible, and responsive layouts. My expertise ensures clean, maintainable code that integrates seamlessly with modern frameworks and enhances user experiences.'},
+    {img_name:'CSS',image_id:'CSS',image_path:'./assets/images/css3.png',course_percent:'95'},
+    {img_name:'JS',image_id:'JS',image_path:'./assets/images/js.png',course_percent:'95'},
+    {img_name:'Angular',image_id:'ANGLR',image_path:'./assets/images/angular.png',course_percent:'95'},
+    {img_name:'Angular Theming',image_id:'ANGLMAT',image_path:'./assets/images/angular-material.png',course_percent:'95'},
+    {img_name:'Figma',image_id:'FIGMA',image_path:'./assets/images/figma.png',course_percent:'95'},
   ]
 
   getData(item:any){
